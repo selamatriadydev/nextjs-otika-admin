@@ -27,7 +27,7 @@ const Support =()=>{
                           Feature
                         </div>
                         <span className="font-weight-bold">#89754</span>
-                        <a href="javascript:void(0)">Please add advance table</a>
+                        <a href="#">Please add advance table</a>
                         <p className="my-1">
                           Hi, can you please add new table for advan...
                         </p>
@@ -51,7 +51,7 @@ const Support =()=>{
                           Bug
                         </div>
                         <span className="font-weight-bold">#57854</span>
-                        <a href="javascript:void(0)">Select item not working</a>
+                        <a href="#">Select item not working</a>
                         <p className="my-1">
                           please check select item in advance form not work...
                         </p>
@@ -75,7 +75,7 @@ const Support =()=>{
                           Query
                         </div>
                         <span className="font-weight-bold">#85784</span>
-                        <a href="javascript:void(0)">
+                        <a href="#">
                           Are you provide template in Angular?
                         </a>
                         <p className="my-1">
@@ -101,7 +101,7 @@ const Support =()=>{
                           Enhancement
                         </div>
                         <span className="font-weight-bold">#25874</span>
-                        <a href="javascript:void(0)">
+                        <a href="#">
                           About template page load speed
                         </a>
                         <p className="my-1">
@@ -119,7 +119,7 @@ const Support =()=>{
                     </div>
                   </div>
                   <a
-                    href="javascript:void(0)"
+                    href="#"
                     className="card-footer card-link text-center small "
                   >
                     View All

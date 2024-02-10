@@ -6,7 +6,7 @@ const SettingSidebar = ()=>{
     const[showSetting, setShowSetting] = useState(false);
     return(
         <div className={`settingSidebar ${showSetting ? 'showSettingPanel' : ''}`}>
-            <Link href="javascript:void(0)" className="settingPanelToggle" onClick={()=>setShowSetting(!showSetting)}>
+            <Link href="#" className="settingPanelToggle" onClick={()=>setShowSetting(!showSetting)}>
               {" "}
               <i className="fa fa-spin fa-cog" />
             </Link>

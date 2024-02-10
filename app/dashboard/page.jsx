@@ -11,7 +11,7 @@ const Dashboard = ()=> {
         <section className="section">
             <div className="row ">
                 {cards.map((card)=>(
-                    <Card item={card} />
+                    <Card key={card.title} item={card} />
                 ))}
             </div>
             <Revenue/>
