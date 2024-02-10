@@ -6,19 +6,9 @@ import { useState } from "react";
 
 const NavbarUser = ()=> {
     const [isToggledUser, setIsToggledUser] = useState(false);
-    // const handleSigOut = async ()=> {
-    //   await signOut();
-    // }
-    const handleSignOut = async () => {
-      try {
-        const data = await signOut({ redirect: false, callbackUrl: '/' });
-        console.log('Sign out success:', data);
-        // Optionally, you can perform additional actions after successful sign out
-      } catch (error) {
-        console.error('Sign out error:', error);
-        // Optionally, you can handle sign out errors here
-      }
-    };
+    const handleSignOut = async ()=> {
+      await signOut();
+    }
     return(
         <li className={`dropdown ${isToggledUser ? 'show' : ''}`}>
               <Link
