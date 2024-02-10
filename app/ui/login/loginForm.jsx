@@ -14,9 +14,9 @@ const LoginForm = ()=> {
               <label htmlFor="email">Email</label>
               <input
                 id="email"
-                type="email"
+                type="text"
                 className="form-control"
-                name="email"
+                name="username"
                 tabIndex={1}
               />
               <div className="invalid-feedback">

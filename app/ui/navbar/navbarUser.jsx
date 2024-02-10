@@ -1,10 +1,24 @@
 "use client"
 
+import { signOut } from "@/app/auth";
 import Link from "next/link";
 import { useState } from "react";
 
 const NavbarUser = ()=> {
     const [isToggledUser, setIsToggledUser] = useState(false);
+    // const handleSigOut = async ()=> {
+    //   await signOut();
+    // }
+    const handleSignOut = async () => {
+      try {
+        const data = await signOut({ redirect: false, callbackUrl: '/' });
+        console.log('Sign out success:', data);
+        // Optionally, you can perform additional actions after successful sign out
+      } catch (error) {
+        console.error('Sign out error:', error);
+        // Optionally, you can handle sign out errors here
+      }
+    };
     return(
         <li className={`dropdown ${isToggledUser ? 'show' : ''}`}>
               <Link
@@ -24,33 +38,31 @@ const NavbarUser = ()=> {
 
               <div className="dropdown-menu dropdown-menu-right pullDown show">
               <div className="dropdown-title">Hello Sarah Smith</div>
-              <a href="profile.html" className="dropdown-item has-icon">
+              <Link href="profile.html" className="dropdown-item has-icon">
                 {" "}
                 <i
                   className="far
                     fa-user"
                 />{" "}
                 Profile
-              </a>{" "}
-              <a href="timeline.html" className="dropdown-item has-icon">
+              </Link>{" "}
+              <Link href="timeline.html" className="dropdown-item has-icon">
                 {" "}
                 <i className="fas fa-bolt" />
                 Activities
-              </a>{" "}
-              <a href="#" className="dropdown-item has-icon">
+              </Link>{" "}
+              <Link href="#" className="dropdown-item has-icon">
                 {" "}
                 <i className="fas fa-cog" />
                 Settings
-              </a>
+              </Link>
               <div className="dropdown-divider" />
-              <a
-                href="auth-login.html"
-                className="dropdown-item has-icon text-danger"
-              >
-                {" "}
+              <form action={handleSignOut}>
+                <button className="dropdown-item has-icon text-danger">
                 <i className="fas fa-sign-out-alt" />
                 Logout
-              </a>
+                </button>
+              </form>
             </div>
               )}
             </li>
