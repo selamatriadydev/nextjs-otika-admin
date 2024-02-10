@@ -35,3 +35,5 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 # nextjs-otika-admin
+
+HTML to JSX Converter: [HTML to JSX](https://transform.tools/html-to-jsx)
